@@ -1,0 +1,17 @@
+@import '../../../assets/styles/theme.scss';
+#side-panel{
+  height: 100%;
+  background-color: $side-panel-bg;
+  span{
+    color: #fff;
+  }
+
+  .side-container{
+    .mat-expansion-panel{
+      background-image: $expansion-panel-bg;
+    }
+    .mat-expansion-panel-header-title{
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,177 @@
+<div id="tags">
+  <div fxLayout="column" fxLayoutAlign="start stretch" class="tag-container">
+    <div fxFlex="10%" fxLayout="row" fxLayoutAlign="space-between center" class="top-tag-container">
+      <span fxFlex>Benchmarking</span>
+      <div fxFlex fxLayout="column" fxLayoutAlign="center flex-end" fxLayoutGap="5px" class="top-tag-inner-container">
+        <span>Historical Data (MT)</span>
+        <span>{{viewDate}} {{viewMinutes}}</span>
+      </div>
+    </div>
+    <div fxFlex>
+      <div class="bottom-tag-container">
+        <mat-accordion [togglePosition]="'before'" multi>
+          <mat-expansion-panel [disabled]="targetTags.length === 0">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Targets
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="target-tag-container" fxLayout="column" fxLayoutAlign="start stretch">
+              <div fxFlex="40px" fxLayout="row" fxLayoutAlign="start stretch" fxLayoutGap="3px" class="target-header">
+                <div fxFlex="40%" fxLayout="row" fxLayoutAlign="center center">
+                  <span></span>
+                </div>
+                <div fxFlex fxLayout="row" fxLayoutAlign="center center">
+                  <span>Target</span>
+                </div>
+                <div fxFlex fxLayout="row" fxLayoutAlign="center center">
+                  <span>Actual</span>
+                </div>
+              </div>
+              <ng-container *ngFor="let target of targetTags;let i = index">
+                <div fxFlex="40px" fxLayout="row" fxLayoutAlign="start stretch" fxLayoutGap="3px" class="target-body">
+                  <div fxFlex="40%" fxLayout="row" fxLayoutAlign="start center"
+                    [style.border-color]="target.activeColor">
+                    <span>{{target.desc}}</span>
+                  </div>
+                  <div fxFlex fxLayout="row" fxLayoutAlign="start center">
+                    <span>{{target.targetValue}}</span> <span class="subscript">{{target.uom}}</span>
+                  </div>
+                  <div fxFlex fxLayout="row" fxLayoutAlign="start center" (click)="openChart(target.id)">
+                    <span>{{target.actualvalue}}</span> <span class="subscript">{{target.uom}}</span>
+                  </div>
+                </div>
+              </ng-container>
+            </div>
+          </mat-expansion-panel>
+          <mat-expansion-panel [disabled]="performanceTags.length === 0">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Performance Tag
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="target-tag-container" fxLayout="column" fxLayoutAlign="start stretch">
+              <div fxFlex="40px" fxLayout="row" fxLayoutAlign="start stretch" fxLayoutGap="3px" class="target-header">
+                <div fxFlex="35%" fxLayout="row" fxLayoutAlign="center center">
+                  <span></span>
+                </div>
+                <div fxFlex fxLayout="row" fxLayoutAlign="center center">
+                  <span>Current Value</span>
+                </div>
+                <div fxFlex fxLayout="row" fxLayoutAlign="center center">
+                  <span>Historic Best</span>
+                </div>
+                <div fxFlex fxLayout="row" fxLayoutAlign="center center">
+                  <span>Potential</span>
+                </div>
+              </div>
+              <ng-container *ngFor="let performance of performanceTags;let i = index">
+                <div fxFlex="40px" fxLayout="row" fxLayoutAlign="start stretch" fxLayoutGap="3px" class="target-body">
+                  <div fxFlex="35%" fxLayout="row" fxLayoutAlign="start center"
+                    [style.border-color]="performance.activeColor">
+                    <span>{{performance.desc}}</span>
+                  </div>
+                  <div fxFlex fxLayout="row" fxLayoutAlign="start center" (click)="openChart(performance.id)">
+                    <span>{{performance.currentValue}}</span> <span *ngIf="performance.currentValue !== '-'"
+                      class="subscript">{{performance.uom}}</span>
+                  </div>
+                  <div fxFlex fxLayout="row" fxLayoutAlign="start center">
+                    <span>{{performance.historicBest}}</span> <span *ngIf="performance.historicBest !== '-'"
+                      class="subscript">{{performance.uom}}</span>
+                  </div>
+                  <div fxFlex fxLayout="row" fxLayoutAlign="start center">
+                    <span>{{performance.potential}}</span> <span *ngIf="performance.potential !== '-'"
+                      class="subscript">{{performance.uom}}</span>
+                  </div>
+                </div>
+              </ng-container>
+            </div>
+          </mat-expansion-panel>
+          <mat-expansion-panel [disabled]="resultTags.length === 0">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Result Tags
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div fxLayout="column" fxLayoutAlign="start stretch" class="result-tag-container">
+              <div fxFlex fxLayout="row" fxLayoutAlign="space-between center" class="filter-section">
+                <div class="color-flag">
+                  <button mat-icon-button aria-label="" [matMenuTriggerFor]="filterMenu"
+                    #filterMenuTrigger="matMenuTrigger">
+                    <mat-icon>filter_list</mat-icon>
+                  </button>
+                  <mat-menu #filterMenu="matMenu" xPosition="after">
+                    <div class="flag-container" (click)="$event.stopPropagation()">
+                      <div class="flag-inner-container" fxLayout="column" fxLayoutAlign="start stretch">
+                        <mat-checkbox fxFlex fxLayout="row" fxLayoutAlign="start center" labelPosition="after"
+                          [(ngModel)]="firstColorValue.checked" (change)="selectAll($event,'All')">
+                          {{firstColorValue.value}}
+                        </mat-checkbox>
+                      </div>
+                      <ng-container *ngFor="let color of allColors;let i = index">
+                          <div class="flag-inner-container" fxLayout="column" fxLayoutAlign="start stretch">
+                            <mat-checkbox fxFlex fxLayout="row" fxLayoutAlign="start center" labelPosition="after"
+                              [(ngModel)]="color.checked" (change)="selectAll($event,color.value)">{{color.value}}
+                            </mat-checkbox>
+                          </div>
+                      </ng-container>
+                      <div fxLayout="row" fxLayoutAlign="center center">
+                        <button mat-button class="submit-button" (click)="submitColor()">
+                          Submit
+                        </button>
+                      </div>
+                    </div>
+                  </mat-menu>
+                </div>
+                <mat-form-field>
+                  <mat-label>Filter Category</mat-label>
+                  <mat-select (selectionChange)="onFilterChange($event.value)">
+                    <mat-option *ngFor="let filter of filterData" [value]="filter.name">
+                      {{filter.name}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <div class="target-tag-container" fxLayout="column" fxLayoutAlign="start stretch">
+                <div fxFlex="40px" fxLayout="row" fxLayoutAlign="start stretch" fxLayoutGap="3px" class="target-header">
+                  <div fxFlex="35%" fxLayout="row" fxLayoutAlign="center center">
+                    <span></span>
+                  </div>
+                  <div fxFlex fxLayout="row" fxLayoutAlign="center center">
+                    <span>Current Value</span>
+                  </div>
+                  <div fxFlex fxLayout="row" fxLayoutAlign="center center">
+                    <span>Historic Best</span>
+                  </div>
+                  <div fxFlex fxLayout="row" fxLayoutAlign="center center">
+                    <span>Deviation</span>
+                  </div>
+                </div>
+                <ng-container *ngFor="let result of filteredResultTag;let i = index">
+                  <div fxFlex="40px" fxLayout="row" fxLayoutAlign="start stretch" fxLayoutGap="3px" class="target-body">
+                    <div fxFlex="35%" fxLayout="row" fxLayoutAlign="start center"
+                      [style.border-color]="result.activeColor">
+                      <span>{{result.desc}}</span>
+                    </div>
+                    <div fxFlex fxLayout="row" fxLayoutAlign="start center" (click)="openChart(result.id)">
+                      <span>{{result.currentValue}} </span> <span *ngIf="result.currentValue !== '-'"
+                        class="subscript">{{result.uom}}</span>
+                    </div>
+                    <div fxFlex fxLayout="row" fxLayoutAlign="start center" (click)="openChart(result.id)">
+                      <span>{{result.historicBest}} </span> <span *ngIf="result.historicBest !== '-'"
+                        class="subscript">{{result.uom}}</span>
+                    </div>
+                    <div fxFlex fxLayout="row" fxLayoutAlign="start center">
+                      <span>{{result.deviation}} </span> <span *ngIf="result.deviation !== '-'"
+                        class="subscript">%</span>
+                    </div>
+                  </div>
+                </ng-container>
+              </div>
+            </div>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+    </div>
+  </div>
+</div>
