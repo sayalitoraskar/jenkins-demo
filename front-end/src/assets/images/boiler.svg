@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="815" height="815" viewBox="0 0 815 815">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1" y1="0.774" x2="0" y2="0.776" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#747474"/>
+      <stop offset="0.502" stop-color="#9a9a9a"/>
+      <stop offset="1" stop-color="#747474"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_792" data-name="Group 792" transform="translate(-4430 -16560)">
+    <rect id="Rectangle_1664" data-name="Rectangle 1664" width="815" height="815" transform="translate(4430 16560)" fill="none"/>
+    <g id="Group_791" data-name="Group 791" transform="translate(-53.5 -50)">
+      <g id="Group_775" data-name="Group 775" transform="translate(-24 236)">
+        <g id="Path_298" data-name="Path 298" transform="translate(5055 16508)" fill="none">
+          <path d="M4,0H22l6,11H-2Z" stroke="none"/>
+          <path d="M 4.593635559082031 1 L -0.3154544830322266 10 L 26.31545448303223 10 L 21.40636444091797 1 L 4.593635559082031 1 M 4 0 L 22 0 L 28 11 L -2 11 L 4 0 Z" stroke="none" fill="#fff"/>
+        </g>
+        <g id="Ellipse_54" data-name="Ellipse 54" transform="translate(5052 16484)" fill="#1b1e25" stroke="#fff" stroke-width="1">
+          <circle cx="16" cy="16" r="16" stroke="none"/>
+          <circle cx="16" cy="16" r="15.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_776" data-name="Group 776" transform="translate(54 536)">
+        <g id="Path_298-2" data-name="Path 298" transform="translate(5055 16508)" fill="none">
+          <path d="M4,0H22l6,11H-2Z" stroke="none"/>
+          <path d="M 4.593635559082031 1 L -0.3154544830322266 10 L 26.31545448303223 10 L 21.40636444091797 1 L 4.593635559082031 1 M 4 0 L 22 0 L 28 11 L -2 11 L 4 0 Z" stroke="none" fill="#fff"/>
+        </g>
+        <g id="Ellipse_54-2" data-name="Ellipse 54" transform="translate(5052 16484)" fill="#1b1e25" stroke="#fff" stroke-width="1">
+          <circle cx="16" cy="16" r="16" stroke="none"/>
+          <circle cx="16" cy="16" r="15.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_777" data-name="Group 777" transform="translate(-398 388)">
+        <g id="Path_298-3" data-name="Path 298" transform="translate(5055 16508)" fill="none">
+          <path d="M4,0H22l6,11H-2Z" stroke="none"/>
+          <path d="M 4.593635559082031 1 L -0.3154544830322266 10 L 26.31545448303223 10 L 21.40636444091797 1 L 4.593635559082031 1 M 4 0 L 22 0 L 28 11 L -2 11 L 4 0 Z" stroke="none" fill="#fff"/>
+        </g>
+        <g id="Ellipse_54-3" data-name="Ellipse 54" transform="translate(5052 16484)" fill="#1b1e25" stroke="#fff" stroke-width="1">
+          <circle cx="16" cy="16" r="16" stroke="none"/>
+          <circle cx="16" cy="16" r="15.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_771" data-name="Group 771" transform="translate(174 260)">
+        <g id="Rectangle_1653" data-name="Rectangle 1653" transform="translate(4598 16395)" stroke="#fff" stroke-width="3" fill="url(#linear-gradient)">
+          <rect width="118" height="728" rx="59" stroke="none"/>
+          <rect x="1.5" y="1.5" width="115" height="725" rx="57.5" fill="none"/>
+        </g>
+        <line id="Line_525" data-name="Line 525" x2="116" transform="translate(4598.5 16452.5)" fill="none" stroke="#fff" stroke-width="3"/>
+        <line id="Line_526" data-name="Line 526" x2="116" transform="translate(4598.5 17065.5)" fill="none" stroke="#fff" stroke-width="3"/>
+        <path id="Path_262" data-name="Path 262" d="M0,0V17H96.291" transform="translate(4615.5 16466.5)" fill="none" stroke="#fff" stroke-width="1" stroke-dasharray="3 3"/>
+        <path id="Path_267" data-name="Path 267" d="M91.57,17V0H76.38V17" transform="translate(4612.5 16596.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <path id="Path_268" data-name="Path 268" d="M91.57,17V0H76.38V17" transform="translate(4531.5 16596.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <path id="Path_266" data-name="Path 266" d="M114.9,0H67.991V12.6H50.012V0H0" transform="translate(4598.5 16613.5)" fill="none" stroke="#fff" stroke-width="1" stroke-dasharray="3 3"/>
+        <path id="Path_265" data-name="Path 265" d="M100.291,27l-4-27H23.012l-4,27" transform="translate(4596.5 16569.5)" fill="none" stroke="#fff" stroke-width="1" stroke-dasharray="3 3"/>
+        <path id="Path_271" data-name="Path 271" d="M21.313,33.266,45.087,19.11,45.257,0" transform="translate(4596.687 16804.105)" fill="none" stroke="#fff" stroke-width="1" stroke-dasharray="3 3"/>
+        <path id="Path_272" data-name="Path 272" d="M45.257,33.265,21.482,19.11,21.313,0" transform="translate(4650.687 16804.105)" fill="none" stroke="#fff" stroke-width="1" stroke-dasharray="3 3"/>
+        <path id="Path_278" data-name="Path 278" d="M112.971,0,21.608,13.469V24.581H-1.559" transform="translate(4601.131 17019.105)" fill="none" stroke="#fff" stroke-width="1" stroke-dasharray="3 3"/>
+        <path id="Path_263" data-name="Path 263" d="M47.888,17V0H0" transform="translate(4598.5 16536.5)" fill="none" stroke="#fff" stroke-width="1" stroke-dasharray="3 3"/>
+        <path id="Path_269" data-name="Path 269" d="M47.888,17V0H0" transform="translate(4598.5 16720.5)" fill="none" stroke="#fff" stroke-width="1" stroke-dasharray="3 3"/>
+        <path id="Path_275" data-name="Path 275" d="M41.452,0V53.139H0" transform="translate(4598.5 16897.361)" fill="none" stroke="#fff" stroke-width="1" stroke-dasharray="3 3"/>
+        <path id="Path_279" data-name="Path 279" d="M0,79.682V0H24.445V79.682" transform="translate(4644.5 17039.361)" fill="none" stroke="#fff" stroke-width="1" stroke-dasharray="3 3"/>
+        <path id="Path_273" data-name="Path 273" d="M39.109.006H7.914" transform="translate(4633.5 16814.5)" fill="none" stroke="#fff" stroke-width="1" stroke-dasharray="3 3"/>
+        <path id="Path_274" data-name="Path 274" d="M61.833,29.389,34.874.006,7.914,29.389" transform="translate(4622.138 16872.309)" fill="none" stroke="#fff" stroke-width="1" stroke-dasharray="3 3"/>
+        <path id="Path_264" data-name="Path 264" d="M0,17V0H47.888" transform="translate(4666.5 16536.5)" fill="none" stroke="#fff" stroke-width="1" stroke-dasharray="3 3"/>
+        <path id="Path_270" data-name="Path 270" d="M0,17V0H47.888" transform="translate(4666.5 16720.5)" fill="none" stroke="#fff" stroke-width="1" stroke-dasharray="3 3"/>
+        <path id="Path_277" data-name="Path 277" d="M3.422,0h50.33" transform="translate(4653.5 16991.5)" fill="none" stroke="#fff" stroke-width="1" stroke-dasharray="3 3"/>
+        <path id="Path_276" data-name="Path 276" d="M0,0V53.139H18.32V70.115H39.6" transform="translate(4674.5 16897.361)" fill="none" stroke="#fff" stroke-width="1" stroke-dasharray="3 3"/>
+        <text id="_1" data-name="1" transform="translate(4651 16474)" fill="#fff" font-size="15" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">1</tspan></text>
+        <text id="_10" data-name="10" transform="translate(4649 16531)" fill="#fff" font-size="15" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">10</tspan></text>
+        <text id="_11" data-name="11" transform="translate(4649 16593)" fill="#fff" font-size="15" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">11</tspan></text>
+        <text id="_12" data-name="12" transform="translate(4649 16648)" fill="#fff" font-size="15" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">12</tspan></text>
+        <text id="_23" data-name="23" transform="translate(4649 16762)" fill="#fff" font-size="15" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">23</tspan></text>
+        <text id="_26" data-name="26" transform="translate(4649 16799)" fill="#fff" font-size="15" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">26</tspan></text>
+        <text id="_27" data-name="27" transform="translate(4611 16934)" fill="#fff" font-size="15" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">27</tspan></text>
+        <text id="_770_F" data-name="770 °F" transform="translate(4637 16983)" fill="#fff" font-size="15" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">770 °F</tspan></text>
+        <text id="W-3901" transform="translate(4626 16510)" font-size="17" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">W-3901</tspan></text>
+        <g id="Polygon_91" data-name="Polygon 91" transform="translate(4648 16991)" fill="none">
+          <path d="M9,0l9,13H0Z" stroke="none"/>
+          <path d="M 9 1.756817817687988 L 1.908565521240234 12 L 16.09143447875977 12 L 9 1.756817817687988 M 9 0 L 18 13 L 0 13 L 9 0 Z" stroke="none" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Group_772" data-name="Group 772" transform="translate(0.835 -284.393)">
+        <g id="Rectangle_1653-2" data-name="Rectangle 1653" transform="translate(4984.165 17365.393)" stroke="#fff" stroke-width="1" fill="url(#linear-gradient)">
+          <rect width="38" height="111" rx="19" stroke="none"/>
+          <rect x="0.5" y="0.5" width="37" height="110" rx="18.5" fill="none"/>
+        </g>
+        <line id="Line_525-2" data-name="Line 525" x2="37.879" transform="translate(4984.146 17381.729)" fill="none" stroke="#fff" stroke-width="1"/>
+        <line id="Line_526-2" data-name="Line 526" x2="37.879" transform="translate(4984.146 17459.318)" fill="none" stroke="#fff" stroke-width="1"/>
+      </g>
+      <g id="Group_774" data-name="Group 774" transform="translate(22566.959 11652.046) rotate(90)">
+        <g id="Rectangle_1653-3" data-name="Rectangle 1653" transform="translate(4984.165 17365.393)" stroke="#fff" stroke-width="1" fill="url(#linear-gradient)">
+          <rect width="52.605" height="153.076" rx="26.303" stroke="none"/>
+          <rect x="0.5" y="0.5" width="51.605" height="152.076" rx="25.803" fill="none"/>
+        </g>
+        <line id="Line_525-3" data-name="Line 525" x2="52.485" transform="translate(4984.146 17392.729)" fill="none" stroke="#fff" stroke-width="1"/>
+        <line id="Line_526-3" data-name="Line 526" x2="52.485" transform="translate(4984.146 17494.395)" fill="none" stroke="#fff" stroke-width="1"/>
+      </g>
+      <g id="Group_773" data-name="Group 773" transform="translate(20 260)">
+        <line id="Line_527" data-name="Line 527" x2="129" transform="translate(4615.5 16517.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <line id="Line_531" data-name="Line 531" x2="143" transform="translate(4599.5 17045.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <line id="Line_532" data-name="Line 532" x2="301" transform="translate(4882.5 17060.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <path id="Path_282" data-name="Path 282" d="M0,0H153.414V-203.762" transform="translate(4882.5 16992.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <path id="Path_283" data-name="Path 283" d="M153.346-145.205l.068-58.557" transform="translate(4882.5 16914.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <path id="Path_284" data-name="Path 284" d="M153.346-145.205l.265-22.219H337.468" transform="translate(4755.5 16943.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <path id="Path_290" data-name="Path 290" d="M124.755-61.663h28.593l.073-105.761h52.207" transform="translate(4745.5 17017.885)" fill="none" stroke="#fff" stroke-width="1"/>
+        <path id="Path_289" data-name="Path 289" d="M153.611-138.125v-30.3" transform="translate(4755.5 16986.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <path id="Path_287" data-name="Path 287" d="M153.346-72.68l.19-94.744H285.518" transform="translate(4936.172 17014.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <path id="Path_286" data-name="Path 286" d="M153.494-167.424H256.26" transform="translate(4964.708 16908.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <path id="Path_285" data-name="Path 285" d="M388.536-102.824l.018-64.6h-36.8l-200,.051" transform="translate(4729.5 16878.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <path id="Path_292" data-name="Path 292" d="M411.421-147.864v-19.56H157.18v37.853" transform="translate(4651.786 16523.637)" fill="none" stroke="#fff" stroke-width="1"/>
+        <path id="Path_297" data-name="Path 297" d="M304.978-167.424H157.18" transform="translate(4719.794 16627.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <path id="Path_293" data-name="Path 293" d="M157.18-126.368v63.441H411.421" transform="translate(4828.786 16585.992)" fill="none" stroke="#fff" stroke-width="1"/>
+        <path id="Path_294" data-name="Path 294" d="M157.18-126.368v24.993H249.3" transform="translate(4987.786 16555.992)" fill="none" stroke="#fff" stroke-width="1"/>
+        <path id="Path_296" data-name="Path 296" d="M196.656-126.368v45.995H157.18" transform="translate(4874.434 16555.992)" fill="none" stroke="#fff" stroke-width="1"/>
+        <path id="Path_295" data-name="Path 295" d="M157.18-106.964v-19.4H249.3" transform="translate(4984.786 16482.582)" fill="none" stroke="#fff" stroke-width="1"/>
+        <path id="Path_291" data-name="Path 291" d="M153.346-167.424v11.855H392.2" transform="translate(4829.489 17098.178)" fill="none" stroke="#fff" stroke-width="1"/>
+        <path id="Path_288" data-name="Path 288" d="M258.409-156.8v-10.621H153.346" transform="translate(4725.5 16978.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <path id="Path_281" data-name="Path 281" d="M0-11.606H236.223V-47.518" transform="translate(4574.5 17170.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <line id="Line_530" data-name="Line 530" y1="85" transform="translate(4614.5 16527.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <line id="Line_529" data-name="Line 529" x2="82" transform="translate(4504.5 16662.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <line id="Line_528" data-name="Line 528" x2="99" transform="translate(4653.5 16626.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <path id="Path_280" data-name="Path 280" d="M154.451,28.38H139.462V64.324L-.2,64.227V0H64" transform="translate(4586.5 16612.5)" fill="none" stroke="#fff" stroke-width="1"/>
+      </g>
+      <path id="Polygon_92" data-name="Polygon 92" d="M4,0,8,11H0Z" transform="translate(5087 16636.5) rotate(180)" fill="#fff"/>
+      <path id="Polygon_94" data-name="Polygon 94" d="M4,0,8,11H0Z" transform="translate(5267.5 16711) rotate(90)" fill="#fff"/>
+      <path id="Polygon_97" data-name="Polygon 97" d="M4,0,8,11H0Z" transform="translate(5041.5 16740) rotate(-90)" fill="#fff"/>
+      <path id="Polygon_98" data-name="Polygon 98" d="M4,0,8,11H0Z" transform="translate(4889.5 16724) rotate(-90)" fill="#fff"/>
+      <path id="Polygon_99" data-name="Polygon 99" d="M4,0,8,11H0Z" transform="translate(4772.5 16773) rotate(90)" fill="#fff"/>
+      <path id="Polygon_100" data-name="Polygon 100" d="M4,0,8,11H0Z" transform="translate(4630 16777.5)" fill="#fff"/>
+      <path id="Polygon_101" data-name="Polygon 101" d="M4,0,8,11H0Z" transform="translate(4664.5 16891) rotate(-90)" fill="#fff"/>
+      <path id="Polygon_102" data-name="Polygon 102" d="M4,0,8,11H0Z" transform="translate(4771.5 16897) rotate(90)" fill="#fff"/>
+      <path id="Polygon_103" data-name="Polygon 103" d="M4,0,8,11H0Z" transform="translate(4514.5 16926) rotate(-90)" fill="#fff"/>
+      <path id="Polygon_104" data-name="Polygon 104" d="M4,0,8,11H0Z" transform="translate(4772.5 17302) rotate(90)" fill="#fff"/>
+      <path id="Polygon_105" data-name="Polygon 105" d="M4,0,8,11H0Z" transform="translate(4584.5 17423) rotate(-90)" fill="#fff"/>
+      <path id="Polygon_106" data-name="Polygon 106" d="M4,0,8,11H0Z" transform="translate(4891.5 17325) rotate(-90)" fill="#fff"/>
+      <path id="Polygon_107" data-name="Polygon 107" d="M4,0,8,11H0Z" transform="translate(4891.5 17256) rotate(-90)" fill="#fff"/>
+      <path id="Polygon_108" data-name="Polygon 108" d="M4,0,8,11H0Z" transform="translate(5252.5 17198) rotate(90)" fill="#fff"/>
+      <path id="Polygon_109" data-name="Polygon 109" d="M4,0,8,11H0Z" transform="translate(5252.5 17103) rotate(90)" fill="#fff"/>
+      <path id="Polygon_110" data-name="Polygon 110" d="M4,0,8,11H0Z" transform="translate(5250.5 16997) rotate(90)" fill="#fff"/>
+      <path id="Polygon_111" data-name="Polygon 111" d="M4,0,8,11H0Z" transform="translate(5123.5 17032) rotate(90)" fill="#fff"/>
+      <path id="Polygon_112" data-name="Polygon 112" d="M4,0,8,11H0Z" transform="translate(4981.5 17107) rotate(90)" fill="#fff"/>
+      <path id="Polygon_113" data-name="Polygon 113" d="M4,0,8,11H0Z" transform="translate(4890.5 17075) rotate(-90)" fill="#fff"/>
+      <path id="Polygon_114" data-name="Polygon 114" d="M4,0,8,11H0Z" transform="translate(4890.5 16975) rotate(-90)" fill="#fff"/>
+      <path id="Polygon_96" data-name="Polygon 96" d="M4,0,8,11H0Z" transform="translate(5267.5 16779) rotate(90)" fill="#fff"/>
+      <path id="Polygon_95" data-name="Polygon 95" d="M4,0,8,11H0Z" transform="translate(5264.5 16612) rotate(90)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

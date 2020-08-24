@@ -1,0 +1,138 @@
+<div id="chart">
+  <div fxLayout="column" fxLayoutAlign="start stretch" class="chart-container">
+    <div fxFlex="9%" fxLayout="row" fxLayoutAlign="space-between center" class="chart-header">
+      <div fxFlex="50%" fxLayout="row" fxLayoutAlign="flex-start center">
+        <p fxFlex="25%" [innerHTML]="'Chart Trend'"></p>
+        <div fxFlex="2%" class="border-class"></div>
+        <mat-form-field appearance="outline" class="dropdown">
+          <mat-select placeholder="Add Tag" (selectionChange)="onTagAdd($event.value)"
+            [disabled]="allCharts.length === 0">
+            <mat-option *ngFor="let random of allCharts" [value]="random.id">
+              <b>{{random.desc}} </b>({{random.name}})
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div fxFlex fxLayout="row" fxLayoutAlign="end" class="chart-icons">
+        <button *ngIf="state == 'close' && allChartView.length > 0" fxFlex="8%" fxFlexAlign="center" mat-icon-button
+          (click)="openAllChart()" title="Show All Chart">
+          <mat-icon class="big-icon">keyboard_arrow_down</mat-icon>
+        </button>
+        <button *ngIf="state == 'open'" fxFlex="8%" fxFlexAlign="center" mat-icon-button (click)="openAllChart()"
+          title="Show All Chart">
+          <mat-icon class="big-icon">keyboard_arrow_up</mat-icon>
+        </button>
+        <div fxFlex="1%" class="icon-divider"></div>
+        <button fxFlex="8%" fxFlexAlign="center" mat-icon-button [matMenuTriggerFor]="filterMenu" title="Filter">
+          <mat-icon>access_time</mat-icon>
+        </button>
+        <mat-menu #filterMenu="matMenu">
+          <ng-container *ngFor="let filter of filterArray">
+            <button mat-menu-item [style.backgroundColor]="activeFilter === filter ? '#4a5d88' : ''"
+              (click)="filterSelected(filter)">
+              <span>{{filter}}</span>
+            </button>
+          </ng-container>
+        </mat-menu>
+        <!-- <div fxFlex="1%" class="icon-divider"></div>
+        <button fxFlex="8%" fxFlexAlign="center" mat-icon-button (click)="exportAsCSV()" title="Export as CSV">
+          <mat-icon>save_alt</mat-icon>
+        </button> -->
+        <div fxFlex="1%" class="icon-divider"></div>
+        <button fxFlex="8%" fxFlexAlign="center" mat-icon-button (click)="closeChart()" title="Close">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+    </div>
+    <div id="activeSize" fxFlex fxLayout="row" fxLayoutAlign="start" class="chart-view">
+      <ng-container *ngIf="!loading">
+        <div  fxFlex fxLayout="column" fxLayoutGap="20px" [ngClass]="chartTrendClass">
+          <highcharts-chart fxFlex="90%" class="main-chart-wrapper" [Highcharts]="Highcharts"
+            [options]="activeChart['chartData']" [(update)]="updateFromInputMain"></highcharts-chart>
+          <div fxFlex fxLayout="row" fxLayoutAlign="start center" class="active-chart-name">
+            <div fxFlex="23%" fxLayout="row" fxLayoutAlign="flex-start center" fxLayoutGap="5px" class="edit-axes"> 
+              <ng-container *ngIf="thirdAxis">
+                <button *ngIf="!editThird" mat-stroked-button color="primary" (click)="editYAxes('third')" 
+                 style="margin-right: 5px;">Y3 Axis</button>
+                <ng-container *ngIf="editThird">
+                  <input fxFlex="25%" type="text" placeholder="Min" [(ngModel)]="third.min" name="fname">
+                  <span fxFlex="6%" class="edit-axes-span">to</span>
+                  <input fxFlex="25%" type="text" placeholder="Max" [(ngModel)]="third.max" name="fname">
+                  <div fxFlex="20%" (click)="submitYAxis('third')">
+                    <mat-icon>check</mat-icon>
+                  </div>
+                </ng-container>
+              </ng-container>
+              <button *ngIf="!editFirst" mat-stroked-button color="primary" (click)="editYAxes('first')">Y1 Axis</button>
+              <ng-container *ngIf="editFirst">
+                <input fxFlex="25%" type="text" placeholder="Min" [(ngModel)]="first.min" name="fname">
+                <span fxFlex="6%" class="edit-axes-span">to</span>
+                <input fxFlex="25%" type="text" placeholder="Max" [(ngModel)]="first.max" name="fname">
+                <div fxFlex="20%" (click)="submitYAxis('first')">
+                  <mat-icon>check</mat-icon>
+                </div>
+              </ng-container>
+            </div>
+            <div fxFlex="54%" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="5px">
+              <ng-container *ngFor="let value of activeChart['tagName']">
+                <div class="circle-div" [style.backgroundColor]="value.color"></div>
+                <span>{{value.name}}</span>
+              </ng-container>
+            </div>
+            <div  fxFlex="23%" fxLayout="row" fxLayoutAlign="flex-end center" fxLayoutGap="5px"
+              class="edit-axes">
+              <ng-container *ngIf="secondaryAxes">
+                <button *ngIf="!editSecond" mat-stroked-button color="primary" (click)="editYAxes('second')">Y2 Axis</button>
+                <ng-container *ngIf="editSecond">
+                  <input fxFlex="25%" type="text" placeholder="Min" [(ngModel)]="second.min" name="fname">
+                  <span fxFlex="6%" class="edit-axes-span">to</span>
+                  <input fxFlex="25%" type="text" placeholder="Max" [(ngModel)]="second.max" name="fname">
+                  <div fxFlex="10%" (click)="submitYAxis('second')">
+                    <mat-icon>check</mat-icon>
+                  </div>
+                </ng-container>
+              </ng-container>
+              <ng-container *ngIf="fourthAxis">
+                <button *ngIf="!editFourth" mat-stroked-button color="primary" (click)="editYAxes('fourth')">Y4 Axis</button>
+                <ng-container *ngIf="editFourth">
+                  <input fxFlex="25%" type="text" placeholder="Min" [(ngModel)]="fourth.min" name="fname">
+                  <span fxFlex="6%" class="edit-axes-span">to</span>
+                  <input fxFlex="25%" type="text" placeholder="Max" [(ngModel)]="fourth.max" name="fname">
+                  <div fxFlex="10%" (click)="submitYAxis('fourth')">
+                    <mat-icon>check</mat-icon>
+                  </div>
+                </ng-container>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+      <mat-spinner *ngIf="loading" class="spinner-container" strokeWidth="5"></mat-spinner>
+      <div [@AfterOpenAllChart]='state' class="all-chart-view" *ngIf="!loading" fxLayout="row"
+        fxLayoutAlign="flex-start center">
+        <ng-container *ngFor="let charts of allChartView;let i = index">
+          <div id="allChart" fxFlex="240px" fxLayout="column" fxLayoutAlign="start" class="all-chart-wrapper">
+            <highcharts-chart *ngIf="!allViewLoading" fxFlex class="chart-wrapper" [Highcharts]="Highcharts"
+              [options]="charts.chartData" [(update)]="charts.compare"></highcharts-chart>
+            <div fxFlex fxLayout="row" fxLayoutAlign="center center" *ngIf="allViewLoading">
+              <mat-spinner strokeWidth="3" [diameter]="30"></mat-spinner>
+            </div>
+            <div class="chart-names" fxFlex="17%" fxLayout="row" fxLayoutAlign="center center">
+              <span fxFlex>{{charts.tagName}}</span>
+              <div class="view-overlay">
+                <div class="inner-view-overlay" fxLayout="row" fxLayoutAlign="flex-end center">
+                  <button *ngIf="charts.compare === false" fxFlex="12%" fxFlexAlign="center" mat-icon-button (click)="compareChart(i)" title="Compare">
+                    <mat-icon>compare</mat-icon>
+                  </button>
+                  <button fxFlex="12%" fxFlexAlign="center" mat-icon-button (click)="MoveChart(i)" title="View">
+                    <mat-icon>remove_red_eye</mat-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

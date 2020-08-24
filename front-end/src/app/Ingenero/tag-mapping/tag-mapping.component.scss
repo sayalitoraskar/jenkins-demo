@@ -1,0 +1,9 @@
+.radio-group {
+	display: flex;
+	flex: 4;
+}
+
+.mapping {
+	height: calc(100% - 113px);
+	overflow-y: auto;
+}
